@@ -1,0 +1,9 @@
+#request socket info
+#txcmd 7e2b01000044e97e
+
+#request a service info
+txcmd 7e120300fffe004e807e
+
+#ack 0f09000000008005
+#
+#txcmd 7E120302FFFE0038b97E

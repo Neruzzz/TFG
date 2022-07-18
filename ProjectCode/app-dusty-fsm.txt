@@ -1,0 +1,22 @@
+Notes
+-Each "methodName()" Dusty C API method we call is wrapped within an app function api_methodName(). (Both request & reply)
+
+Code Structure
+1. main() function calls dn_ipmg_init() API function. It's not wrapped.
+	-It sets notif, status & reply callbacks.
+
+2. [-Once dn_ipmg_init() API function returns, the app status function is called back.]
+	-status function is called back only when initiating connection with the API.
+
+3. schedule the next function to call with fsm_scheduleEvent(time, &api_methodName)
+	-In fsm_scheduleEvent(...) we set the api_methodName() as the method to be called back when timer reaches 0.
+	-start timer
+ 
+4. When timer reaches 0, api_methodName() is called back.
+	-fsm_setCallback( api_methodName_reply() ) is called in order to associate a reply method to the request method.
+	-API function methodName() is called.
+	-fsm_scheduleEvent(api_response_timeout) is called to schedule a response timeout method.
+
+5. When timer reaches 0, api_methodName_reply() is called back.
+	-schedule the next api_methodName() function to be called after this reply function with fsm_scheduleEvent()
+	-

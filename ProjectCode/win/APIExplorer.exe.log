@@ -1,0 +1,8 @@
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyc", line 1542, in __call__
+  File "dustUI\dustFrameConnection.pyc", line 248, in _connectSerial
+  File "SmartMeshSDK\IpMgrConnectorSerial\IpMgrConnectorSerialInternal.pyc", line 33, in connect
+  File "SmartMeshSDK\IpMgrConnectorSerial\IpMgrConnectorSerialInternal.pyc", line 53, in _sendHello
+  File "SmartMeshSDK\SerialConnector\SerialConnector.pyc", line 190, in _sendInternal
+CommandError: Command does not exist: id=9

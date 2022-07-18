@@ -1,0 +1,4 @@
+# Close Socket CMD
+# txcmd 7E160102163E687E
+# Reset
+# txcmd 7e0800200c217e

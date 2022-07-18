@@ -1,0 +1,2 @@
+0x7E	COMMAND		length		flag		[ResponseCode]		message payload		fcs	0x7E
+1b	  1b		  1b		 1b		      1b			nb		2b	1b

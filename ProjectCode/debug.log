@@ -1,0 +1,9 @@
+[1016/062255.409:ERROR:settings.cc(430)] Settings version is not 5
+[1019/085057.919:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1021/085751.433:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1021/124030.891:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1021/124030.891:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1021/124030.891:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1021/124030.891:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1021/124030.891:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1021/124030.891:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)

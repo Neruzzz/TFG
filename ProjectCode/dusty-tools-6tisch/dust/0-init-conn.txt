@@ -1,0 +1,21 @@
+# Reset Commnand 
+txcmd 7e0800200c217e
+WAIT 10
+#ack boot (0f 09 0a 00 00 00 01 01 00 00 00 00) 
+ack 0F090A
+FLUSH 2
+#
+# join request
+txcmd 7E06000207337E
+#
+#ack notif joining (0f 09 00 00 00 01 00 03)
+ack 0f09000000010003 notif-joining
+#
+#ack notif connected (0f 09 02 00 00 00 20 05)
+ack 0f09020000002005 notif-connected
+#
+#ack notif svchange  (0f 09 00 00 00 00 80 05)
+ack 0f09000000008005 notif-svchange
+#
+# Reset Command
+# txcmd 7e0800200c217e

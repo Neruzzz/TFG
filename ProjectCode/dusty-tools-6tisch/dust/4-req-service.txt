@@ -1,0 +1,10 @@
+#request a service with to destination fffe, service type 0, every x3e8 (1000ms)
+#txcmd 7e110700fffe00000003e865427e
+# 2000ms x7d0
+# txcmd 7e110708fffe00000007d0a1937e
+# 5000ms x1388
+txcmd 7e110708fffe0000001388FFFF7e
+#
+ack 0f0900000000800500000000
+#
+#txcmd 7E120302FFFE0038b97E

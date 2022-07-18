@@ -1,0 +1,2 @@
+# txdata AABBCCDD using a data rate of 1 packet every 1000ms num packets to send until it stops 30
+txloop 0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF 0000 5000

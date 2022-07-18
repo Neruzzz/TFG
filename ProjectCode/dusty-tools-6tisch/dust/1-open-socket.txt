@@ -1,0 +1,5 @@
+#open socket
+txcmd 7E15010000F40B7E
+#
+#bind socket 
+txcmd 7E17030216F0B8D39B7E

@@ -1,0 +1,65 @@
+#
+# Copyright (c) 2018 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-BSD-5-Clause-Nordic
+#
+
+
+menu "MQTT simple sample"
+
+# CONFIG variables related to TLS
+config SEC_TAG
+    int "Security tag to use for the connection"
+    default 16842753
+
+config PEER_VERIFY
+    int "Peer verify parameter for mqtt_client"
+    default 1
+    # help Set to 0 for VERIFY_NONE, 1 for VERIFY_OPTIONAL, and 2 for VERIFY_REQUIRED.
+
+# CONFIG variables     
+config MQTT_PUB_TOPIC
+	string "MQTT publish topic"
+	default "dev/uoc-1/notif/notifData"
+
+config MQTT_SUB_TOPIC
+	string "MQTT subscribe topic"
+	default "dev/uoc-1/notif/solParsed"
+
+config MQTT_CLIENT_ID
+	string "MQTT Client ID"
+	default "uoc-1"
+	
+config MQTT_BROKER_SET_USERNAME_AND_PASSWORD
+	int "set if username and pass used"
+	default 0
+
+config MQTT_BROKER_USERNAME
+	string "MQTT broker user name"
+	default "wine"
+
+config MQTT_BROKER_PASSWORD
+    string "MQTT broker password"
+    default "wine2020"
+
+config MQTT_BROKER_HOSTNAME
+	string "MQTT broker hostname"
+	default 'a2yx4i4f6mu6nh-ats.iot.eu-central-1.amazonaws.com'#"mqtt.eclipse.org"
+
+config MQTT_BROKER_PORT
+	int "MQTT broker port"
+	default 8883
+
+config MQTT_MESSAGE_BUFFER_SIZE
+	int "MQTT message buffer size"
+	default 1024
+
+config MQTT_PAYLOAD_BUFFER_SIZE
+	int "MQTT payload buffer size"
+	default 1024
+
+endmenu
+
+menu "Zephyr Kernel"
+source "$ZEPHYR_BASE/Kconfig.zephyr"
+endmenu
