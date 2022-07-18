@@ -1,0 +1,74 @@
+#
+# Copyright (c) 2020 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+menu "MQTT simple sample"
+config MQTT_PUB_TOPIC
+	string "MQTT publish topic"
+	default "imanol/nRF9160/pub"
+
+config MQTT_SUB_TOPIC
+	string "MQTT subscribe topic"
+	default "imanol/nRF9160/sub"
+
+config MQTT_CLIENT_ID
+	string "MQTT Client ID"
+	default "UOC-1"
+
+config MQTT_BROKER_HOSTNAME
+	string "MQTT broker hostname"
+	default "broker.hivemq.com"
+
+config MQTT_BROKER_PORT
+	int "MQTT broker port"
+	default 1883
+	
+config MQTT_BROKER_USERNAME
+	string "MQTT broker user name"
+	default "wine"
+
+config MQTT_BROKER_PASSWORD
+    string "MQTT broker password"
+    default "wine2020"
+
+config MQTT_MESSAGE_BUFFER_SIZE
+	int "MQTT message buffer size"
+	default 1024
+
+config MQTT_PAYLOAD_BUFFER_SIZE
+	int "MQTT payload buffer size"
+	default 1024
+
+config MQTT_RECONNECT_DELAY_S
+	int "Seconds to delay before attempting to reconnect to the broker."
+	default 5
+
+config LTE_CONNECT_RETRY_DELAY_S
+	int "Seconds to delay before attempting to retry LTE connection."
+	default 5
+
+config MQTT_TLS_SEC_TAG
+	int "TLS credentials security tag"
+	default 16842753
+
+config MQTT_TLS_SESSION_CACHING
+	bool "Enable TLS session caching"
+
+config MQTT_TLS_PEER_VERIFY
+	int "Set peer verification level"
+	default 1
+	help
+		Set to 0 for VERIFY_NONE, 1 for VERIFY_OPTIONAL, and 2 for
+		VERIFY_REQUIRED.
+
+endmenu
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu
+
+module = MQTT_SIMPLE
+module-str = MQTT Simple
+source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"

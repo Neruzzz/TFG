@@ -1,0 +1,11 @@
+set(spm_KERNEL_HEX_NAME zephyr.hex)
+set(spm_ZEPHYR_BINARY_DIR C:/Users/Imanol/Desktop/TFG/MyProjects/TEST_LEDS_BOTONES/build_nrf9160dk_nrf9160ns/spm/zephyr)
+set(spm_KERNEL_ELF_NAME zephyr.elf)
+list(APPEND spm_BUILD_BYPRODUCTS C:/Users/Imanol/Desktop/TFG/MyProjects/TEST_LEDS_BOTONES/build_nrf9160dk_nrf9160ns/spm/zephyr/zephyr.hex)
+list(APPEND spm_BUILD_BYPRODUCTS C:/Users/Imanol/Desktop/TFG/MyProjects/TEST_LEDS_BOTONES/build_nrf9160dk_nrf9160ns/spm/zephyr/zephyr.elf)
+list(APPEND spm_BUILD_BYPRODUCTS
+    C:/Users/Imanol/Desktop/TFG/MyProjects/TEST_LEDS_BOTONES/build_nrf9160dk_nrf9160ns/spm/libspmsecureentries.a)
+list(APPEND spm_PM_YML_DEP_FILES C:/Users/Imanol/ncs/v1.5.0/nrf/samples/spm/pm.yml)
+list(APPEND spm_PM_YML_FILES C:/Users/Imanol/Desktop/TFG/MyProjects/TEST_LEDS_BOTONES/build_nrf9160dk_nrf9160ns/spm/zephyr/include/generated/pm.yml)
+list(APPEND spm_PM_YML_DEP_FILES C:/Users/Imanol/ncs/v1.5.0/nrf/subsys/partition_manager/pm.yml.trustzone)
+list(APPEND spm_PM_YML_FILES C:/Users/Imanol/Desktop/TFG/MyProjects/TEST_LEDS_BOTONES/build_nrf9160dk_nrf9160ns/spm/modules/nrf/subsys/partition_manager/pm.yml.trustzone)
